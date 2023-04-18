@@ -2,7 +2,7 @@
     "baseURL": "https://mq00fc.github.io",
     "languageCode": "zh-cn",
     "defaultContentLanguage": "zh-cn",
-    "title": "DreamBlog",
+    "title": "梦想博客",
     "theme": ["hugo-notice", "m10c-iso"],
     "module": {
         "imports": [
@@ -12,7 +12,7 @@
         ]
     },
     "params": {
-        "author": "DreamBlog",
+        "author": "梦奴",
         "description": "飘飘何所似，天地一沙鸥",
         "avatar": "/images/avatar.webp",
         "menu_item_separator": " - ",
@@ -41,25 +41,25 @@
         "main": [
             {
                 "identifier": "home",
-                "name": "Home",
+                "name": "首页",
                 "url": "/",
                 "weight": 1
             },
             {
                 "identifier": "tags",
-                "name": "Tags",
+                "name": "标签",
                 "url": "/tags/",
                 "weight": 2
             },
             {
                 "identifier": "about",
-                "name": "About",
+                "name": "关于",
                 "url": "/about/",
                 "weight": 3
             },
             {
                 "identifier": "links",
-                "name": "Links",
+                "name": "链接",
                 "url": "/links/",
                 "weight": 4
             }

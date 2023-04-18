@@ -3,7 +3,8 @@ title = "Hello World"
 tags = ["C#","编程"]
 date = "2023-04-18"
 update = "2023-04-18"
-enableGitalk = true
+enableGitalk = false
+draft = false
 +++
 
 ## Hello World
@@ -13,12 +14,14 @@ enableGitalk = true
 {{< /notice >}}
 
 
-
-啦啦啦啦
-
+该博客内大部分文章均是围绕C#/.net 的技术编写,本人计算机小白..如有错误请勿开喷
 
 按照惯例，以下
 
 ```c sharp
 Console.WriteLine("Hello World");
 ```
+
+### 参考资料
+- [Windows环境下搭建hugo博客部署到GitHub上](https://cloud.tencent.com/developer/article/1834162)
+- [Isoheptane](https://github.com/Isoheptane/isoheptane.github.io)
