@@ -1,6 +1,6 @@
 +++
 title = "关于"
-enableGitalk = true
+enableGitalk = false
 +++
 
 ## 关于七碳
