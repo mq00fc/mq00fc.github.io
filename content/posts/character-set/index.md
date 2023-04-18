@@ -4,6 +4,7 @@ tags = ["杂谈"]
 date = "2021-10-31"
 update = "2022-10-14"
 enableGitalk = true
+draft = true
 +++
 
 ## 基本信息

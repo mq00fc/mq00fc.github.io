@@ -4,6 +4,7 @@ tags = ["Linux"]
 date = "2021-10-13"
 update = "2021-10-16"
 enableGitalk = true
+draft = true
 +++
 
 ## 为什么突然想装 Arch Linux
