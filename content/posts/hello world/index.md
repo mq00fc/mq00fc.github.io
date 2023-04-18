@@ -1,10 +1,9 @@
 +++
 title = "Hello World"
-tags = ["Linux"]
+tags = ["c#"]
 date = "2023-04-18"
 update = "2023-04-18"
 enableGitalk = true
-tags ["C#"]
 +++
 
 ## Hello World
