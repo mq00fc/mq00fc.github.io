@@ -16,4 +16,4 @@ public DreamSlave
 }
 ```
 - 链接地址：<https://blog.dreamogi.com>
-- 图标：[头像](/images/avatar.webp)
+- 图标：[头像](/images/avatar.jpg)
