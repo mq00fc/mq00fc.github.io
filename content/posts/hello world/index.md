@@ -8,7 +8,12 @@ enableGitalk = true
 
 ## Hello World
 
-自己的博客
+{{< notice tip >}}
+写该博客的初衷是为了更快捷和方便的记录一些技术要点，防止因为年龄大导致的忘记
+{{< /notice >}}
+
+
+
 
 
 按照惯例，以下
