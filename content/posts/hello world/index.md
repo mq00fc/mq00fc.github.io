@@ -7,8 +7,6 @@ enableGitalk = false
 draft = false
 +++
 
-## Hello World
-
 欢迎来到我的博客！
 
 作为这个博客的第一篇文章，我想用传统的程序员方式来打个招呼，写一个 “Hello World”！
