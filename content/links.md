@@ -3,6 +3,11 @@ title = "链接"
 enableGitalk = false
 +++
 
+## 友情链接
+{{< link_list >}}
+    {{< link name="口袋工具" url="https://koudai.work/" avatar="https://s1.koudai.work/logo.png" desc="Micoya工具站" >}}  
+{{< /link_list >}}
+
 ### 本站的信息
 - 名称：梦想博客
 - 描述：
