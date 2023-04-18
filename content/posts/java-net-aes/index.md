@@ -10,9 +10,8 @@ draft = false
 
 ###### 最近在跟三方对接 对方采用AES加解密 作为一个资深neter Ctrl CV 是我最大的优点 所以我义正言辞的问他们要了demo
 
-![1541998119616](https://img2018.cnblogs.com/blog/553504/201811/553504-20181112175040954-864870987.png)
-
 ###### java demo代码：
+
 ``` java
     public class EncryptDecryptTool
     {
@@ -94,11 +93,7 @@ draft = false
 
 ##### 哇咔咔 这不是大名鼎鼎的java嘛 但这难不倒我 不是还有IKVM 照样Ctrl CV
 
-![1542000611421](https://img2018.cnblogs.com/blog/553504/201811/553504-20181112175040691-256096757.png)
-
 ##### 新建一个.NET Standard项目NuGet 安装IKVM
-
-![1536719957239](https://img2018.cnblogs.com/blog/553504/201809/553504-20180912104232952-823857838.png)
 
 ##### C#主要代码
 ``` c#
@@ -175,10 +170,6 @@ draft = false
 ```    
 
 ##### 运行NetCore控制台
-
-![1542001527509](https://img2018.cnblogs.com/blog/553504/201811/553504-20181112175040313-1186847132.png)
-
-![1542001571646](https://img2018.cnblogs.com/blog/553504/201811/553504-20181112175039754-1429131478.png)
 
 ##### 这是Net Framework Net Core以及IKVM不得不说的故事了 但是下午就要联调了 总不能给三方讲一千零一夜 没事这难不倒我 新建一个Net Framework控制台
 ``` c#
