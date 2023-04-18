@@ -1,0 +1,89 @@
+{
+    "baseURL": "https://mq00fc.github.io/",
+    "languageCode": "zh-cn",
+    "defaultContentLanguage": "zh-cn",
+    "title": "DreamBlog",
+    "theme": ["hugo-notice", "m10c-iso"],
+    "module": {
+        "imports": [
+            {
+                "path": "m10c-iso"
+            }
+        ]
+    },
+    "params": {
+        "author": "DreamBlog",
+        "description": "飘飘何所似，天地一沙鸥",
+        "avatar": "/images/avatar.webp",
+        "menu_item_separator": " - ",
+        "favicon": "/images/favicon.ico",
+        "social": [
+            {
+                "icon": "github",
+                "name": "GitHub",
+                "url": "https://github.com/mq00fc"
+            },
+            {
+                "icon": "mail",
+                "name": "Email",
+                "url": "mailto:hongdefeng@outlook.com"
+            }
+        ],
+        "gitalk": {
+            "clientID": "73a5bebbd353dd3f5fa2",
+            "clientSecret": "f76954e2f78a3021a3a51173e1713dea168ef6ac",
+            "repo": "mq00fc.github.io",
+            "owner": "mq00fc",
+            "admin": "mq00fc"
+        }
+    },
+    "menu": {
+        "main": [
+            {
+                "identifier": "home",
+                "name": "Home",
+                "url": "/",
+                "weight": 1
+            },
+            {
+                "identifier": "tags",
+                "name": "Tags",
+                "url": "/tags/",
+                "weight": 2
+            },
+            {
+                "identifier": "about",
+                "name": "About",
+                "url": "/about/",
+                "weight": 3
+            },
+            {
+                "identifier": "links",
+                "name": "Links",
+                "url": "/links/",
+                "weight": 4
+            }
+        ]
+    },
+    "markup": {
+        "highlight": {
+            "codeFences": true,
+            "guessSyntax": false,
+            "hl_Lines": "",
+            "lineNoStart": 1,
+            "lineNos": false,
+            "lineNumbersInTable": true,
+            "noClasses": true,
+            "style": "monokai",
+            "tabWidth": 4
+        }
+    },
+    "minify": {
+        "tdewolff": {
+            "html": {
+                "keepWhitespace": true  
+            }
+        }
+    },
+    "buildFuture": true
+}
