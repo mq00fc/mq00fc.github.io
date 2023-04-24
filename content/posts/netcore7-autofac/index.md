@@ -2,10 +2,9 @@
 title = "在asp.net core中使用autofac"
 tags = ["c-sharp","编程","aspnet-core","AutoFac"]
 date = "2023-04-18"
-update = "2023-04-18"
+update = "2023-04-19"
 enableGitalk = false
 draft = false
-weight = 3
 +++
 
 
