@@ -14,7 +14,9 @@ draft = false
 Let's Encrypt支持多域名证书和通配符证书，下面让我们开始
 
 ## 使用acme.sh
-之前尝试使用过Certbot但是效果不是很理想，主要是我的域名配置在阿里云，找了半天没有找到配置阿里云dns的插件.. [acme.sh项目地址](https://github.com/acmesh-official/acme.sh)
+之前尝试使用过Certbot但是效果不是很理想，主要是我的域名配置在阿里云找了半天没有找到配置阿里云修改域名解析的插件. 
+
+[acme.sh项目地址](https://github.com/acmesh-official/acme.sh)
 
 ### 开始安装
 ``` shell
