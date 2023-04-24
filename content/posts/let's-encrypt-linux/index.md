@@ -18,7 +18,7 @@ Let's Encrypt支持多域名证书和通配符证书，下面让我们开始
 
 ### 开始安装
 ``` shell
-curl https://get.acme.sh | sh -s email=my@example.com
+curl https://get.acme.sh | sh -s email=my@dreamogi.com
 ```
 
 ### 颁发证书
@@ -54,18 +54,18 @@ acme.sh --info -d dreamogi.com
 ### 自动续期
 由于证书的有效期为3个月,所以需要进行自动续期，具体内容参见[How to renew the certs](https://github.com/acmesh-official/acme.sh#12-how-to-renew-the-certs)
 ```shell
-acme.sh --renew -d example.com --force
+acme.sh --renew -d dreamogi.com --force
 ```
 
 
 ### 生成证书后重载Nginx
 
 ```shell
-acme.sh --install-cert -d example.com \
+acme.sh --install-cert -d dreamogi.com \
 --key-file       /path/to/keyfile/in/nginx/key.pem  \
 --fullchain-file /path/to/fullchain/nginx/cert.pem \
 --reloadcmd     "service nginx force-reload"
 ```
 
-如此便完成了证书的自动配置
+如此便完成了在Nginx下ssl证书的配置
 {{< image 2.png >}}
