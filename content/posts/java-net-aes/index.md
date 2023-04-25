@@ -3,7 +3,7 @@ title = "C#与java aes加解密"
 tags = ["c-sharp","java","aes加解密","搬运"]
 date = "2023-04-18"
 update = "2023-04-18"
-enableGitalk = false
+enableGitalk = true
 draft = false
 +++
 
