@@ -34,7 +34,8 @@
             "clientSecret": "f7619f9b799b6e9438cacab7f7a5934af0d9e416",
             "repo": "mq00fc.github.io",
             "owner": "mq00fc",
-            "admin": "mq00fc"
+            "admin": "mq00fc",
+			"distractionFreeMode": false
         }
     },
     "menu": {
