@@ -3,7 +3,7 @@ title = "Linux下使用Let's Encrypt配置Nginx SSL证书"
 tags = ["Linux","SSL","编程"]
 date = "2023-04-24"
 update = "2023-04-24"
-enableGitalk = false
+enableGitalk = true
 draft = false
 +++
 
