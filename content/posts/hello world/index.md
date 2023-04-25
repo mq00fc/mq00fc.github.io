@@ -3,7 +3,7 @@ title = "Hello World"
 tags = ["c-sharp","编程"]
 date = "2023-04-17"
 update = "2023-04-17"
-enableGitalk = false
+enableGitalk = true
 draft = false
 +++
 
