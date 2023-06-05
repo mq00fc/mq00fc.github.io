@@ -5,7 +5,8 @@ enableGitalk = false
 
 ## 友情链接
 {{< link_list >}}
-    {{< link name="口袋工具" url="https://koudai.work/" avatar="/images/links/koudai.png" desc="Micoya工具站" >}}  
+    {{< link name="Micoya の 星轴空间站" url="https://micoya.com/" avatar="/images/links/micoya.png" desc="Micoya博客" >}}  
+	{{< link name="口袋工具" url="https://koudai.work/" avatar="/images/links/koudai.png" desc="Micoya工具站" >}}  
 {{< /link_list >}}
 
 ### 本站的信息
