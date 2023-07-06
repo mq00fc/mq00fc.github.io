@@ -62,7 +62,7 @@ ssh dream
 {{< notice tip >}}
 至于如何使用sftp来进行文件的上传和下载这里就不过多赘述了，请使用**Xftp 7**来完成
 {{< /notice >}}
-
+- - -
 
 ### 包管理器
 linux中的包管理器真的是非常的好用，仅需要几个字母便可以直接安装/卸载/更新软件
@@ -112,7 +112,7 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 - [**Nginx**](https://nginx.org/en/linux_packages.html#Ubuntu)
 - [**Redis**](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
 - [**DotNET**](https://learn.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu#register-the-microsoft-package-repository)
-
+- - -
 
 ### 系统代理
 打开/etc/environment文件
@@ -122,6 +122,7 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 http_proxy="http://ip:port/"
 https_proxy="http://ip:port/"
 ```
+- - -
 
 ### 结语
 尚未写完...
