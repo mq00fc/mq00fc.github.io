@@ -36,7 +36,7 @@ Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)
 ssh root@127.0.0.1
 ```
 
-其中root为账户名，127.0.0.1为ip地址，当然您也可以使用在** .ssh **中设置的别名
+其中root为账户名，127.0.0.1为ip地址，当然您也可以使用在.ssh中设置的别名
 
 ```
 Host dream
