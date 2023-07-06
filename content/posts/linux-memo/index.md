@@ -6,7 +6,7 @@ update = "2023-07-06"
 enableGitalk = true
 +++
 
-### 前言
+## 前言
 在 [Linux下使用Let's Encrypt配置Nginx SSL证书](/posts/lets-encrypt-linux/) 这篇文章中，粗略的讲解了一下在linux中如何使用acme.sh来实现ssl证书的签发及配置
 
 尽管上述文章只是很简单的进行了介绍我认为以后会看的懂，但是随着时间的流逝和恰逢大变，记忆力的减弱和身心俱疲以及对技术的减少痴迷，所以我还是选择了以本文来重构一下的我学习的linux以及需要的记忆的地方
@@ -17,7 +17,7 @@ enableGitalk = true
 
 - - -
 
-### SSH
+## SSH
 先引用一下来自维基百科的说法
 {{< image openssh.png >}}
 
@@ -68,7 +68,7 @@ ssh dream
 - - -
 
 
-### SSH安全性
+## SSH安全性
 
 {{< notice warning >}}
 如果仅设置了密码登录，存在被爆破的风险，而且root用户无法远程登录
@@ -114,16 +114,16 @@ vi sshd_config
 
 修改以下配置
 
-# 允许密钥登录
+### 允许密钥登录
 PubkeyAuthentication yes
 
-#允许root登录（此项可能存在风险）
+### 允许root登录（此项可能存在风险）
 PermitRootLogin yes
 
-#存放pub密钥的文件路径
+### 存放pub密钥的文件路径
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 
-#关闭密码登录（即仅允许密钥方式的登录）
+### 关闭密码登录（即仅允许密钥方式的登录）
 PasswordAuthentication no
 
 
@@ -132,7 +132,7 @@ PasswordAuthentication no
 
 - - -
 
-### 包管理器
+## 包管理器
 linux中的包管理器真的是非常的好用，仅需要几个字母便可以直接安装/卸载/更新软件
 
 ```
@@ -183,7 +183,7 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 
 - - -
 
-### 系统代理
+## 系统代理
 打开/etc/environment文件
 
 在文件中增加如下内容，然后:wq保存后reboot机器即可正常使用
@@ -193,7 +193,7 @@ https_proxy="http://ip:port/"
 ```
 - - -
 
-### 结语
+## 结语
 尚未写完...
 
 - - -
