@@ -15,6 +15,7 @@ enableGitalk = true
 本文的编写以及本人所使用的linux系统为 Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)，不能保证所有的命令能被其他版本所用
 {{< /notice >}}
 
+- - -
 
 ### SSH
 先引用一下来自维基百科的说法
@@ -62,6 +63,73 @@ ssh dream
 {{< notice tip >}}
 至于如何使用sftp来进行文件的上传和下载这里就不过多赘述了，请使用**Xftp 7**来完成
 {{< /notice >}}
+
+
+- - -
+
+
+### SSH安全性
+
+{{< notice warning >}}
+如果仅设置了密码登录，存在被爆破的风险，而且root用户无法远程登录
+
+之前开了个虚拟机采用账号密码都是root，结果一晚上过去我就再也连不上我的服务器了...
+{{</ notice >}}
+
+这里采用**Win32-OpenSSH**为例，介绍如何使用密钥登录的方式来防范风险
+
+* 首先打开Win32-OpenSSH的文件
+{{< image sshkey.png >}}
+
+*然后打开ssh-keygen.exe
+{{< image keygen.png >}}
+
+一共需要输入3次，分别为 
+- **密钥的文件名**
+- **密钥的密码**
+- **密码确认密码**
+
+输入完成后会在根目录下生成文件
+{{< image sshpub.png >}}
+
+其中后缀名为.pub需要放入在服务器上，打开ssh远程链接
+```
+#进入.ssh目录
+cd .ssh
+
+#创建authorized_keys文件，如果存在则直接编辑即可
+touch authorized_keys >> 您的pub文件内的内容
+```
+
+pub文件的内容是这种形式 ssh-rsa xxxxxx
+
+***没有后缀名的文件为登录私钥，一定要妥善保存，否则后续可能会无法链接到服务器！！！！***
+
+* 然后打开ssh配置项
+```
+cd /etc/ssh
+ 
+vi sshd_config
+```
+
+修改以下配置
+
+# 允许密钥登录
+PubkeyAuthentication yes
+
+#允许root登录（此项可能存在风险）
+PermitRootLogin yes
+
+#存放pub密钥的文件路径
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+
+#关闭密码登录（即仅允许密钥方式的登录）
+PasswordAuthentication no
+
+
+以上配置保存完毕后，输入 systemctl restart sshd.service 重启ssh服务，即可完成上述配置！
+
+
 - - -
 
 ### 包管理器
@@ -108,10 +176,11 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 # # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 ```
 
-使用包管理器安装的部分软件可能版本过老，如果遇到此情况的话请参考下列官方文档教程处理
+使用包管理器安装的部分软件可能版本过老，如果遇到此情况的话请参考下列官方文档教程处理（其他软件大同小异不做过多赘述）
 - [**Nginx**](https://nginx.org/en/linux_packages.html#Ubuntu)
 - [**Redis**](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
 - [**DotNET**](https://learn.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu#register-the-microsoft-package-repository)
+
 - - -
 
 ### 系统代理
