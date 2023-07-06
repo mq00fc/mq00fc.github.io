@@ -13,7 +13,9 @@ enableGitalk = true
 
 {{< notice tip >}}
 本文的编写以及本人所使用的linux系统为 
+
 Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)
+
 不能保证所有的命令能被其他版本所用，也可能会有错误
 {{< /notice >}}
 
@@ -205,3 +207,5 @@ echo "Hello Linux"
 ```
 
 - - -
+### 参考资料
+- [OpenSSH - Wiki](https://zh.wikipedia.org/wiki/OpenSSH)
