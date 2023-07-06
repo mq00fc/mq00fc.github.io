@@ -9,10 +9,12 @@ enableGitalk = true
 ## 前言
 在 [Linux下使用Let's Encrypt配置Nginx SSL证书](/posts/lets-encrypt-linux/) 这篇文章中，粗略的讲解了一下在linux中如何使用acme.sh来实现ssl证书的签发及配置
 
-尽管上述文章只是很简单的进行了介绍我认为以后会看的懂，但是随着时间的流逝和恰逢大变，记忆力的减弱和身心俱疲以及对技术的减少痴迷，所以我还是选择了以本文来重构一下的我学习的linux以及需要的记忆的地方
+尽管上述文章只是很简单的进行了介绍我认为以后会看的懂，但是随着时间的流逝和恰逢大变，明显感觉到记忆力的减弱和身心俱疲以及对技术的痴迷与日俱减，所以我选择了以本文来重构一下的我学习的linux以及需要的记忆的地方
 
 {{< notice tip >}}
-本文的编写以及本人所使用的linux系统为 Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)，不能保证所有的命令能被其他版本所用
+本文的编写以及本人所使用的linux系统为 
+Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)
+不能保证所有的命令能被其他版本所用，也可能会有错误
 {{< /notice >}}
 
 - - -
@@ -114,16 +116,16 @@ vi sshd_config
 
 修改以下配置
 
-### 允许密钥登录
+#### 允许密钥登录
 PubkeyAuthentication yes
 
-### 允许root登录（此项可能存在风险）
+#### 允许root登录（此项可能存在风险）
 PermitRootLogin yes
 
-### 存放pub密钥的文件路径
+#### 存放pub密钥的文件路径
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 
-### 关闭密码登录（即仅允许密钥方式的登录）
+#### 关闭密码登录（即仅允许密钥方式的登录）
 PasswordAuthentication no
 
 
@@ -194,6 +196,12 @@ https_proxy="http://ip:port/"
 - - -
 
 ## 结语
-尚未写完...
+这些仅是linux系统中非常少的一些常规用法，无奈由于时间和精力不足，无法对其中的内容做更多的处理
+
+感谢micoya，fox等大佬的帮助和教导让我踏上了新世界的大门，行则将至道阻且长,本文会持续更新下去
+
+```Linux
+echo "Hello Linux"
+```
 
 - - -
