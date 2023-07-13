@@ -2,14 +2,14 @@
 title = "Linux备忘录"
 tags = ["Linux", "SSH"]
 date = "2023-07-06"
-update = "2023-07-06"
+update = "2023-07-13"
 enableGitalk = true
 +++
 
 ## 前言
 在 [Linux下使用Let's Encrypt配置Nginx SSL证书](/posts/lets-encrypt-linux/) 这篇文章中，粗略的讲解了一下在linux中如何使用acme.sh来实现ssl证书的签发及配置
 
-尽管上述文章只是很简单的进行了介绍我认为以后会看的懂，但是随着时间的流逝和恰逢大变，明显感觉到记忆力的减弱和身心俱疲以及对技术的痴迷与日俱减，所以我选择了以本文来重构一下的我学习的linux以及需要的记忆的地方
+尽管上述文章只是很简单的进行了介绍我认为以后会看的懂，但是随着时间的流逝和恰逢大变，明显感觉到记忆力的减弱和身心俱疲以及对技术的痴迷与日俱减，所以我选择了以本文来重构一下我学习linux以及需要的记忆的地方
 
 {{< notice tip >}}
 本文的编写以及本人所使用的linux系统为 
@@ -196,6 +196,42 @@ http_proxy="http://ip:port/"
 https_proxy="http://ip:port/"
 ```
 - - -
+
+## 开机自启
+打开 /etc/systemd/system/ 文件夹
+
+新建一个文件，文件名称以xxx.service格式
+
+然后键入如下的内容
+
+``` shell
+[Unit]
+Description=subconverter
+
+[Service]
+WorkingDirectory=/root/subconverter
+ExecStart=/root/subconverter/subconverter
+Restart=always
+RestartSec=3 
+SyslogIdentifier=dotnet-example
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+* Description		说明
+* WorkingDirectory	工作目录
+* ExecStart			执行命令
+* RestartSec		启动次数
+* User				运行的角色
+
+编辑完成后输入如下的命令
+* systemctl daemon-reload	重载
+* systemctl enable xxx.service	启用服务
+* systemctl restart xxx.service	启动服务
+* systemctl status xxx.service	获取服务状态
+
+如果status显示为 ***active (running)*** 则代表正常启动，否则可能是配置出了一些问题，具体内容请查看日志后决定如何处理
 
 ## 结语
 这些仅是linux系统中非常少的一些常规用法，无奈由于时间和精力不足，无法对其中的内容做更多的处理
