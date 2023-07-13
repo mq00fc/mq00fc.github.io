@@ -38,6 +38,9 @@ ssh root@127.0.0.1
 
 其中root为账户名，127.0.0.1为ip地址，当然您也可以使用在.ssh中设置的别名
 
+> .ssh文件夹位于 %USERPROFILE% 目录下
+>  C:\Users\Administrator.DESKTOP-1A2DGNK\.ssh 
+
 ``` shell
 Host dream
 	HostName 127.0.0.1
