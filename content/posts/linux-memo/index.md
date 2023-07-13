@@ -32,13 +32,13 @@ Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-76-generic x86_64)
 如果是以前的话，我会推荐使用Xshell 7，但是现在，我发现**Win32-OpenSSH**更胜一筹
 
 那么来尝试使用一下**Win32-OpenSSH**吧，首先打开cmd，输入
-```
+``` shell
 ssh root@127.0.0.1
 ```
 
 其中root为账户名，127.0.0.1为ip地址，当然您也可以使用在.ssh中设置的别名
 
-```
+``` shell
 Host dream
 	HostName 127.0.0.1
 	User root
@@ -54,7 +54,7 @@ Host dream
 
 经过上述配置后，您可以使用以下的命令来进行链接
 
-```
+``` shell
 ssh dream
 ```
 
@@ -97,7 +97,7 @@ ssh dream
 {{< image sshpub.png >}}
 
 其中后缀名为.pub需要放入在服务器上，打开ssh远程链接
-```
+``` shell
 #进入.ssh目录
 cd .ssh
 
@@ -110,7 +110,7 @@ pub文件的内容是这种形式 ssh-rsa xxxxxx
 ***没有后缀名的文件为登录私钥，一定要妥善保存，否则后续可能会无法链接到服务器！！！！***
 
 * 然后打开ssh配置项
-```
+``` shell
 cd /etc/ssh
  
 vi sshd_config
@@ -139,7 +139,7 @@ PasswordAuthentication no
 ## 包管理器
 linux中的包管理器真的是非常的好用，仅需要几个字母便可以直接安装/卸载/更新软件
 
-```
+``` shell
 #安装
 apt install xxx
 
@@ -160,7 +160,7 @@ apt upgrade
 
 使用vi编辑/etc/apt/sources.list,修改如下
 
-```
+``` shell
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
@@ -191,7 +191,7 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 打开/etc/environment文件
 
 在文件中增加如下内容，然后:wq保存后reboot机器即可正常使用
-```
+``` shell
 http_proxy="http://ip:port/"
 https_proxy="http://ip:port/"
 ```
@@ -232,6 +232,8 @@ WantedBy=multi-user.target
 * systemctl status xxx.service	获取服务状态
 
 如果status显示为 ***active (running)*** 则代表正常启动，否则可能是配置出了一些问题，具体内容请查看日志后决定如何处理
+
+- - -
 
 ## 结语
 这些仅是linux系统中非常少的一些常规用法，无奈由于时间和精力不足，无法对其中的内容做更多的处理
